@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}bicycles{% endblock title %}
+
+
+
+{% block body %}
+<div class="container-fluid py-3" id="custom-cards">
+  <h2 class="pb-2 border-bottom text-center">Select From Our Range Of Bicycles</h2>
+
+  <div class="container py-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {% for cycle in cycles %}
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src="{{cycle.img.url}}" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h5 class="name">{{cycle.name}}</h5>
+          <p class="card-text">{{cycle.details}}</p>
+          <h6 class="Desc mb-2" style="
+          position:relative;
+          left:240px;
+          ">₹ {{cycle.price}}</h6>
+          <div class="buy_now align-items-center">
+            <div class="btn-group">
+              <div class="buy_now"><a href="/bicycles" target="_blank" class="btn btn-warning lined" style="
+                  position:relative;
+                  top: -35px;">BUY NOW</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>  
+  </div>
+</div>
+
+{% endblock body %}
