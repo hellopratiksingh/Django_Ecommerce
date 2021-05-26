@@ -2,6 +2,8 @@
 
 Cycle Selling E-Commerce website
 
+![Screenshot (66)](https://user-images.githubusercontent.com/61048532/119623481-d87bee00-be25-11eb-81eb-a77c43c46ec3.png)
+
 Project :
 Designing a E-commerce website for Cycles Selling in local area. With 
 Features of simple design and easy payment methods.
