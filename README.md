@@ -1,8 +1,11 @@
 # jeet_cycle
 
 Cycle Selling E-Commerce website
+![Screenshot (108)](https://user-images.githubusercontent.com/61048532/121814537-38302100-cc8f-11eb-9f75-bf31aa1bb8df.png)
+![Screenshot (109)](https://user-images.githubusercontent.com/61048532/121814542-3c5c3e80-cc8f-11eb-8879-1b3f35693f47.png)
+![Screenshot (110)](https://user-images.githubusercontent.com/61048532/121814543-3f572f00-cc8f-11eb-8322-c68007f05403.png)
+![Screenshot (103)](https://user-images.githubusercontent.com/61048532/121814556-4f6f0e80-cc8f-11eb-9bfe-a4dd9c4ce4d1.png)
 
-![Screenshot (66)](https://user-images.githubusercontent.com/61048532/119623481-d87bee00-be25-11eb-81eb-a77c43c46ec3.png)
 
 Project :
 Designing a E-commerce website for Cycles Selling in local area. With 
