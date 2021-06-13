@@ -1,39 +1,46 @@
-{% extends 'base.html' %}
+{%load static%}
 
-{% block title %}bicycles{% endblock title %}
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Bicycle</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
 
+<body>
 
-{% block body %}
-<div class="container-fluid py-3" id="custom-cards">
-  <h2 class="pb-2 border-bottom text-center">Select From Our Range Of Bicycles</h2>
-
-  <div class="container py-3">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      {% for cycle in cycles %}
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="{{cycle.img.url}}" class="card-img-top" alt="...">
+    <nav>
+        <img src="/static/img/logo.png" class="logo">
+        <div class="nav-icons">
+            <img src="/static/img/search.png">
+            <img src="/static/img/cart.png">
+            <img src="/static/img/menu.png">
         </div>
-        <div class="card-body">
-          <h5 class="name">{{cycle.name}}</h5>
-          <p class="card-text">{{cycle.details}}</p>
-          <h6 class="Desc mb-2" style="
-          position:relative;
-          left:240px;
-          ">₹ {{cycle.price}}</h6>
-          <div class="buy_now align-items-center">
-            <div class="btn-group">
-              <div class="buy_now"><a href="/cart" target="_blank" class="btn btn-warning lined" style="
-                  position:relative;
-                  top: -35px;">BUY NOW</a></div>
+    </nav>
+    {% for cycle in cycles %}
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <h1>{{cycle.firstName}}<br>{{cycle.lastName}}</h1>
+                <p>{{cycle.details}}</p>
+                <h2>₹ {{cycle.price}}</h2>
+                <button type="button">ADD TO CART</button>
             </div>
-          </div>
+            <div class="col-2">
+                <div class="feature-img">
+                    <img src="{{cycle.img.url}}">
+                </div>
+                <h2>{{ cycle.firstName }}</h2>
+            </div>
         </div>
-      </div>
-      {% endfor %}
-    </div>  
-  </div>
-</div>
+    </div>
+    {% endfor %}
+</body>
 
-{% endblock body %}
+</html>

@@ -9,5 +9,5 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(bicycle)
 class bicycleAdmin(admin.ModelAdmin):
-    list_display = ("name", "price")
+    list_display = ("firstName", "lastName", "price")
     

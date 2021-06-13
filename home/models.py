@@ -11,7 +11,8 @@ class Contact(models.Model):
 
 
 class bicycle(models.Model):
-    name = models.CharField(max_length=50)
+    firstName = models.CharField(max_length=10)
+    lastName = models.CharField(max_length=50)
     img = models.ImageField(upload_to='photos')
     details = models.TextField()
     price = models.IntegerField()
