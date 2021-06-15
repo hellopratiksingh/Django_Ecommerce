@@ -4,6 +4,8 @@ from home.models import *
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.http import JsonResponse
+import json
+import requests
 
 # Create your views here.
 def index(request):
@@ -79,6 +81,10 @@ def cart(request):
 
 
 def updateItem(request):
-    data = 'item was added'
-    return JsonResponse(data, safe=False)
-    
+    data = json.loads(request.body)
+    cycleId = data['cycleId']
+    action = data['action']
+    print('Action:', action)
+    print('cycle:', cycleId)
+
+    return JsonResponse('Item was added', safe=False)
