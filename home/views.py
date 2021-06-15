@@ -3,6 +3,7 @@ from datetime import datetime
 from home.models import *
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -65,4 +66,19 @@ def login(request):
 
 
 def cart(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = order.objects.get_or_create(customer=customer, complete=False)
+        items = order.orderitem_set.all()
+
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0}
+
     return render(request, 'cart.html')
+
+
+def updateItem(request):
+    data = 'item was added'
+    return JsonResponse(data, safe=False)
+    
