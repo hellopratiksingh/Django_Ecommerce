@@ -20,7 +20,8 @@
         <img src="/static/img/log.png" class="logo">
         <div class="nav-icons">
             <img src="/static/img/search.png">
-            <img src="/static/img/cart.png">
+            <a href="/cart">
+            <img src="/static/img/cart.png"></a>
             <img src="/static/img/menu.png">
         </div>
     </nav>
@@ -31,7 +32,9 @@
                 <h1>{{cycle.firstName}}<br>{{cycle.lastName}}</h1>
                 <p>{{cycle.details}}</p>
                 <h2>₹ {{cycle.price}}</h2>
+                <a href="/cart">
                 <button data-cycle={{cycle.id}} data-action="add" class="update-cart" type="button">ADD TO CART</button>
+                </a>
             </div>
             <div class="col-2">
                 <div class="feature-img">
