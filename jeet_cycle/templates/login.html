@@ -16,7 +16,7 @@
 <body>
     <div class="form"> 
     <p>Login</p>
-    <form>
+    <form method="post">
         {% csrf_token %}
         <input type="text" name="username" placeholder="username">
         <input type="password" name="password" placeholder="password">
